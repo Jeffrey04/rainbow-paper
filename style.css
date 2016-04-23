@@ -232,6 +232,9 @@ a:link {
 
     #meta .sub {
         border: 1px transparent solid;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 
     #meta .widget {
@@ -262,6 +265,8 @@ a:link {
     #meta .widget dd {
         float: right;
         width: 66.7%;
+        margin: 0;
+        padding: 0;
     }
 
     #meta .widget::after {
