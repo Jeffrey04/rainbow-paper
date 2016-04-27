@@ -42,36 +42,4 @@
                 <?php endwhile; endif; ?>
             </div>
         </div>
-        <nav id="meta">
-            <ul class="sub">
-                <li id="header" class="widget">
-                    <h2>Something</h2>
-                    <p>Something something slogan</p>
-                </li>
-                <li class="post-meta widget">
-                    <dl>
-                        <dt>Something</dt>
-                        <dd>Some other thing</dd>
-                        <dt>Something</dt>
-                        <dd>Some other thing</dd>
-                        <dt>Something</dt>
-                        <dd>Some other thing</dd>
-                    </dl>
-                </li>
-                <li class="widget">
-                    <h4>Block title</h4>
-                    <ul>
-                        <li>Some list</li>
-                        <li>Some list</li>
-                        <li>Some list</li>
-                        <li>Some list</li>
-                        <li><ul><li>I'm nested</li></ul></li>
-                    </ul>
-                </li>
-                <li class="widget">
-                    <h4>Some form</h4>
-                    <form><input /> <button>Search</button></form>
-                </li>
-            </ul>
-        </nav>
 <?php get_footer(); ?>
