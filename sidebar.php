@@ -1,8 +1,8 @@
         <nav id="meta">
             <ul class="sub">
                 <li id="header" class="widget">
-                    <h2>Something</h2>
-                    <p>Something something slogan</p>
+                    <h2><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h2>
+                    <p><?php bloginfo('name'); ?></p>
                 </li>
                 <?php
                     if (is_active_sidebar('sidebar')):
