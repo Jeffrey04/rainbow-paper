@@ -245,6 +245,14 @@ a:link {
         font-size: 1.8rem;
     }
 
+        #meta .widget h2 a,
+        #meta .widget h2 a:link,
+        #meta .widget h2 a:visited,
+        #meta .widget h2 a:hover,
+        #meta .widget h2 a:active {
+            color: #999;
+        }
+
     #meta .widget h3 {
         margin: 0 0 1rem;
         font-size: 1.2rem;
