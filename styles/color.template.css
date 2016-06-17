@@ -1,0 +1,15 @@
+body {
+    background-color: #EEE;
+}
+
+a:link {
+    color: <?php echo $colors[3] ?>;
+}
+
+a:visited, a:active {
+    color: <?php echo $colors[4] ?>;
+}
+
+a:hover {
+    color: <?php echo $colors[2] ?>;
+}
