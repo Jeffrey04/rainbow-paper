@@ -8,11 +8,11 @@
  */
 
 @import url('styles/reset.css');
+@import url('/color.css');
 
 body {
     float: left;
     width: 100%;
-    background-color: #EEE;
     color: #666;
     font-size: 13pt;
     font-family: sans-serif;
@@ -43,7 +43,6 @@ body::after {
 }
 
 a:link {
-    color: #0099FF;
     text-decoration: none;
 }
 
