@@ -48,7 +48,7 @@ add_action('after_setup_theme',
 
 add_action('parse_request',
            function(&$wp) {
-               if('color.css' === $wp->query_vars['name']) {
+               if('color.css' === $wp->query_vars['name'] || 'color.css' === $wp->query_vars['pagename']) {
                    header('Content-type: text/css');
                    $colors = rainbow_paper_colors();
                    include sprintf('%s/styles/color.template.css', __DIR__);
