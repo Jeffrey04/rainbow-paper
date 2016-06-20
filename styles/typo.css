@@ -17,11 +17,11 @@ a:link {
 
 
 #content {}
-    #content .sub h1 {
+    #content h1 {
         font-size: 1.5rem;
     }
 
-    #content .sub p {
+    #content p {
         line-height: 1.5;
     }
 
@@ -52,7 +52,7 @@ a:link {
 
 
     #content {}
-        #content .sub h1 {
+        #content h1 {
             font-size: 2rem;
         }
 }
