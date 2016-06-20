@@ -50,12 +50,12 @@ body {
     padding: 0.5rem;
     clear: both;
     float: left;
-    margin-top: 1rem;
 }
-    #content .sub {
+    #content .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                     0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-bottom: 1px transparent solid;
+        margin: 1.5rem 0 1rem;
     }
 
     #content h1 {
