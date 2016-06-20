@@ -4,7 +4,7 @@
                     <i class="material-icons toggle">menu</i>
                 </script>
                 <h2><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h2>
-                <p><?php bloginfo('name'); ?></p>
+                <p><?php bloginfo('description'); ?></p>
             </div>
             <ul id="sidebar">
             <?php
