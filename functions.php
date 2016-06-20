@@ -2,6 +2,10 @@
 
 namespace rainbow_paper;
 
+require_once sprintf('%s/functional.php', __DIR__);
+
+use rainbow_paper\functional;
+
 $default_colors = ['#FFF479', '#FFF15B', '#FFE900', '#8E8200', '#685F00'];
 
 function rainbow_paper_colors() {
@@ -89,27 +93,3 @@ add_action('customize_register',
                    }
                );
            });
-
-namespace rainbow_paper\functional;
-
-function map(array $array, callable $function, $user_data = NULL) {
-    return \array_map(
-        function($key) use($array, $function) {
-            return call_user_func_array(
-                $function,
-                array_merge([$array[$key], $key],
-                            is_null($user_data)
-                            ? []
-                            : [$user_data]));
-        },
-        array_keys($array));
-}
-
-function each(array $array, callable $function, $user_data = NULL) {
-    return call_user_func_array(
-        'array_walk',
-        array_merge([&$array, $function],
-                    is_null($user_data)
-                    ? []
-                    : [$user_data]));
-}
