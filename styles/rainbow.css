@@ -82,7 +82,7 @@ body::after {
 }
 
 
-#meta .sub::before {
+#header::before {
     clear: both;
     content: '';
     display: block;
