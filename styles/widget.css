@@ -55,15 +55,18 @@ body {
     #content .sub {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 1rem;
+        border-bottom: 1px transparent solid;
     }
 
-    #content .sub h1 {
+    #content h1 {
         margin: 0 0 1.5rem;
+        padding: 2rem 1rem 50px;
+        background-position: bottom;
+        background-repeat: no-repeat;
     }
 
-    #content .sub p {
-        margin: 1rem 0;
+    #content p {
+        margin: 1rem;
     }
 
 

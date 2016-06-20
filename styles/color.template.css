@@ -1,6 +1,6 @@
 body {
     background-color: #EFEFEF;
-    color: #333;
+    color: #666;
 }
 
 
@@ -35,12 +35,22 @@ a:hover {
     #content h1 a:link,
     #content h1 a:visited, 
     #content h1 a:active {
-        color: #999;
+        color: #EEE;
+        background-color: #666;
+    }
+
+
+    #content h1 {
+        background-image: <?php echo sprintf('url(%s/bg.php?%s)',
+                                             get_template_directory_uri(),
+                                             http_build_query(['b' => substr($colors[3], 1),
+                                                               'f' => 'FFF',
+                                                               'h' => 50])); ?>;
     }
 
 
     #content h1 a:hover {
-        color: #AAA;
+        color: #EFEFEF;
     }
 
 
