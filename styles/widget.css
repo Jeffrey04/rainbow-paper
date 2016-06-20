@@ -1,0 +1,113 @@
+*, div {
+    box-sizing: border-box;
+}
+
+
+/* design for mobile first */
+body {
+    float: left;
+    width: 100%;
+}
+
+
+#container {
+    width: 100%;
+    float: left;
+}
+
+
+#meta {
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#header {}
+    #header .toggle {
+        float: left;
+    }
+
+
+    #header p {
+        display: none;
+    }
+
+
+#sidebar {
+    clear: both;
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#content {
+    width: calc(100% - 35px);
+    padding: 0.5rem;
+    clear: both;
+    float: left;
+    margin-top: 1rem;
+}
+    #content .sub {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-bottom: 1px transparent solid;
+    }
+
+    #content h1 {
+        margin: 0 0 1.5rem;
+        padding: 2rem 1rem 50px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    #content p {
+        margin: 1rem;
+    }
+
+
+/* desktop overwrites here */
+@media only screen and (min-width: 768px) {
+    #container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+
+    #meta {
+        width: 33.3%;
+        float: right;
+        box-shadow: none;
+        margin-top: 1rem;
+    }
+
+
+    #header {
+        margin-top: 2rem;
+    }
+        #header p {
+            display: block;
+        }
+
+
+    #sidebar {
+        display: block;
+        position: static;
+        box-shadow: none;
+        margin-top: 2rem;
+    }
+        #sidebar .widget {
+            margin-top: 1.5rem;
+        }
+
+
+    #content {
+        width: 66.7%;
+        float: left;
+        clear: none;
+    }
+}

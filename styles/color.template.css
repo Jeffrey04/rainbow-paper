@@ -1,15 +1,93 @@
 body {
-    background-color: #EEE;
+    background-color: #EFEFEF;
+    color: #666;
 }
+
 
 a:link {
     color: <?php echo $colors[3] ?>;
 }
 
+
 a:visited, a:active {
     color: <?php echo $colors[4] ?>;
 }
 
+
 a:hover {
     color: <?php echo $colors[2] ?>;
+}
+
+
+#meta,
+#sidebar {
+    background-color: #FFF;
+}
+
+
+#content {}
+    #content .sub {
+        background-color: #FFF;
+    }
+
+
+    #content h1,
+    #content h1 a:link,
+    #content h1 a:visited, 
+    #content h1 a:active {
+        color: #EEE;
+        background-color: #666;
+    }
+
+
+    #content h1 {
+        background-image: <?php echo sprintf('url(%s/bg.php?%s)',
+                                             get_template_directory_uri(),
+                                             http_build_query(['b' => substr($colors[3], 1),
+                                                               'f' => 'FFF',
+                                                               'h' => 50])); ?>;
+    }
+
+
+    #content h1 a:hover {
+        color: #EFEFEF;
+    }
+
+
+@media only screen and (min-width: 768px) {
+    #header {}
+        #header h2 a {
+            color: #BBB;
+        }
+
+
+        #header p {
+            color: #BBB;
+        }
+
+
+    #meta {
+        background-color: transparent;
+        color: #AAA;
+    }
+
+
+    #sidebar {
+        background-color: transparent;
+    }
+        #sidebar .widget h3 {
+            color: #BBB;
+        }
+
+
+        #sidebar a:link,
+        #sidebar a:visited,
+        #sidebar a:active {
+            color: #AAA;
+        }
+
+
+        #sidebar a:hover {
+            color: #AAA;
+        }
 }
