@@ -18,15 +18,18 @@ add_action('wp_enqueue_scripts',
            function() {
                // Theme stylesheet
                wp_enqueue_style('rainbow-paper-style', get_stylesheet_uri());
+               wp_enqueue_style('rainbow-paper-icons', '//fonts.googleapis.com/icon?family=Material+Icons');
 
                wp_enqueue_script('underscore',
                                  '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js',
                                  [],
+                                 NULL,
                                  TRUE);
 
                wp_enqueue_script('rainbow-paper-script',
                                  get_template_directory_uri() . '/scripts/functions.js',
                                  ['jquery', 'underscore'],
+                                 NULL,
                                  TRUE);
 
                add_theme_support('html5', ['search-form']);
