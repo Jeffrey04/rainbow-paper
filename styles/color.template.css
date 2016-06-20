@@ -1,15 +1,83 @@
 body {
-    background-color: #EEE;
+    background-color: #EFEFEF;
+    color: #333;
 }
+
 
 a:link {
     color: <?php echo $colors[3] ?>;
 }
 
+
 a:visited, a:active {
     color: <?php echo $colors[4] ?>;
 }
 
+
 a:hover {
     color: <?php echo $colors[2] ?>;
+}
+
+
+#meta,
+#sidebar {
+    background-color: #FFF;
+}
+
+
+#content {}
+    #content .sub {
+        background-color: #FFF;
+    }
+
+
+    #content h1,
+    #content h1 a:link,
+    #content h1 a:visited, 
+    #content h1 a:active {
+        color: #999;
+    }
+
+
+    #content h1 a:hover {
+        color: #AAA;
+    }
+
+
+@media only screen and (min-width: 768px) {
+    #header {}
+        #header h2 a {
+            color: #BBB;
+        }
+
+
+        #header p {
+            color: #BBB;
+        }
+
+
+    #meta {
+        background-color: transparent;
+        color: #AAA;
+    }
+
+
+    #sidebar {
+        background-color: transparent;
+    }
+        #sidebar .widget h3 {
+            color: #BBB;
+        }
+
+
+        #sidebar a:link,
+        #sidebar a:visited,
+        #sidebar a:active {
+            color: #AAA;
+        }
+
+
+        #sidebar a:hover {
+            color: #AAA;
+        }
 }

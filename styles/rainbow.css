@@ -1,0 +1,97 @@
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #C9170B;
+    background-attachment: fixed;
+}
+
+
+body::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 5px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #C9760B;
+    background-attachment: fixed;
+}
+
+
+#container::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #BDC90B;
+    background-attachment: fixed;
+}
+
+
+#container::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #0BC917;
+    background-attachment: fixed;
+}
+
+
+#content::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #0BBDC9;
+    background-attachment: fixed;
+}
+
+
+#meta::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 25px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #170BC9;
+    background-attachment: fixed;
+}
+
+
+#meta .sub::before {
+    clear: both;
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 30px;
+    z-index: -100;
+    width: 5px;
+    height: 100%;
+    background-color: #760BC9;
+    background-attachment: fixed;
+}

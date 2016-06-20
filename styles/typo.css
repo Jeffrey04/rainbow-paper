@@ -1,0 +1,58 @@
+body {
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+
+#header {}
+    #header h2 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+#content {}
+    #content .sub h1 {
+        font-size: 1.5rem;
+    }
+
+    #content .sub p {
+        line-height: 1.5;
+    }
+
+
+@media only screen and (min-width: 768px) {
+    #header {}
+        #header h2 {
+            text-align: left;
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+
+
+    #sidebar {}
+        #sidebar a::after {
+            content: ' \E157';
+            display: inline-block;
+            font-family: 'Material Icons';
+        }
+
+
+        #sidebar .widget {
+            font-size: 0.9rem;
+        }
+            #sidebar .widget h3 {
+                font-size: 1.2rem;
+            }
+
+
+    #content {}
+        #content .sub h1 {
+            font-size: 2rem;
+        }
+}
