@@ -8,7 +8,7 @@ use rainbow_paper\functional;
 
 $default_colors = ['#FFF479', '#FFF15B', '#FFE900', '#8E8200', '#685F00'];
 
-function rainbow_paper_colors() {
+function colors() {
     global $default_colors;
     return functional\map(
         $default_colors,
@@ -16,6 +16,13 @@ function rainbow_paper_colors() {
             return get_theme_mod("rainbow-paper-settings-colors-{$index}", $color);
         }
     );
+}
+
+
+function comment($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment;
+
+    require 'template-comment.php';
 }
 
 
@@ -51,7 +58,7 @@ add_action('parse_request',
            function(&$wp) {
                if('color.css' === $wp->query_vars['name'] || 'color.css' === $wp->query_vars['pagename']) {
                    header('Content-type: text/css');
-                   $colors = rainbow_paper_colors();
+                   $colors = colors();
                    include sprintf('%s/styles/color.template.css', __DIR__);
                    exit();
                }
