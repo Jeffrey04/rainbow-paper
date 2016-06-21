@@ -82,7 +82,7 @@ body::after {
 }
 
 
-#header::before {
+#footer::before {
     clear: both;
     content: '';
     display: block;
