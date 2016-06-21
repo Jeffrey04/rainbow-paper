@@ -28,9 +28,11 @@
 
         <?php $more = FALSE; while(have_posts()) : the_post(); ?>
             <article typeof="schema:BlogPosting" resource="<?php echo esc_url(get_permalink()); ?>" class="card" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
-                <h1 class="title" id="post-<?php the_ID(); ?>">
-                    <a href="<?php the_permalink(); ?>"><?php echo the_title('', '', FALSE); ?></a>
-                </h1>
+                <header>
+                    <h1 class="title" id="post-<?php the_ID(); ?>">
+                        <a href="<?php the_permalink(); ?>"><?php echo the_title('', '', FALSE); ?></a>
+                    </h1>
+                </header>
                 <?php get_template_part('postmeta'); ?>
                 <div class="content" property="dc:description schema:articleBody">
                 <?php

@@ -109,6 +109,9 @@ body {
     }
 
 
+    #content div ul,
+    #content div ol,
+    #content div div,
     #content div p {
         margin: 1rem 0;
     }
