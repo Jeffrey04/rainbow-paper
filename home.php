@@ -37,7 +37,7 @@
                 <div class="content" property="dc:description schema:articleBody">
                 <?php
                     /* translators: %s: Name of current post */
-                    global $more; $more = TRUE; 
+                    $more = FALSE;
                     the_content(sprintf(
                         __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'rainbow-paper'),
                         get_the_title()
