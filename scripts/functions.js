@@ -24,6 +24,15 @@ function is_big_screen() {
 }
 
 
+function sidebar_resize() {
+    if(is_big_screen()) {
+        $(this).css('display', 'block')
+    } else {
+        $(this).css('display', 'none')
+    }
+}
+
+
 function sidebar_toggle(_event) {
     $(this).slideToggle()
 }
@@ -35,6 +44,7 @@ $(function() {
 
     $('#sidebar')
         .on('sidebar:toggle', sidebar_toggle)
+        .on('sidebar:resize', sidebar_resize)
 
     $(window)
         .resize(
