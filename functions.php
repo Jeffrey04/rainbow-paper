@@ -18,6 +18,7 @@ function rainbow_paper_colors() {
     );
 }
 
+
 add_action('wp_enqueue_scripts',
            function() {
                // Theme stylesheet
