@@ -32,12 +32,16 @@ function color($image, $hex) {
 }
 
 
-function fill($image, $height, $color, array $pair) {
+function fill($image, $height, $zoom, $color, array $pair) {
     list($from, $to) = $pair;
 
-    call_user_func_array('imagefilledrectangle', array_merge([$image],
-                                                             [$from[0], $height, $to[0], $to[1]],
-                                                             [$color]));
+    call_user_func_array('imagefilledrectangle',
+                         array_merge([$image],
+                                     [$from[0],
+                                      $height,
+                                      $to[0],
+                                      round($to[1] / $zoom)],
+                                     [$color]));
 }
 
 
@@ -115,14 +119,14 @@ function param($key, $default_value) {
 $image = functional\reduce(
     pair(points(param('w', WIDTH), param('h', HEIGHT), round(param('n', RANGE_MIN)/ 2), round(param('x', RANGE_MAX) / 2))),
     function($image, array $pair) {
-        fill($image, param('h', HEIGHT), color($image, param('f', COLOR_FG)), $pair);
+        fill($image, param('h', HEIGHT), 0.75, color($image, param('f', COLOR_FG)), $pair);
 
         return $image;
     },
     functional\reduce(
         pair(points(param('w', WIDTH), param('h', HEIGHT), param('n', RANGE_MIN), param('x', RANGE_MAX))),
         function($image, array $pair) {
-            fill($image, param('h', HEIGHT), color($image, param('b', COLOR_BG)), $pair);
+            fill($image, param('h', HEIGHT), 1, color($image, param('b', COLOR_BG)), $pair);
 
             return $image;
         },
