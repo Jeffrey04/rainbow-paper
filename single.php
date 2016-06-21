@@ -1,5 +1,6 @@
 <?php get_header(); ?>
         <div id="content">
+        <?php if(have_posts()) : the_post(); ?>
             <main typeof="schema:BlogPosting" resource="<?php echo esc_url(get_permalink()); ?>" class="card" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
                 <article>
                     <header>
@@ -17,7 +18,7 @@
                         ));
                     ?>
                     </div>
-                <article>
+                </article>
             </main>
 
             <?php
@@ -25,5 +26,6 @@
                     comments_template('', TRUE);
                 endif;
             ?>
+        <?php endif; ?>
         </div>
 <?php get_footer(); ?>
