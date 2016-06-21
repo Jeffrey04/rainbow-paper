@@ -1,37 +1,14 @@
 <?php get_header(); ?>
         <div id="content">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article typeof="schema:BlogPosting" resource="<?php echo esc_url(get_permalink()); ?>" class="card" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
-                <h1 property="dc:title schema:name"><a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                    <?php echo the_title('', '', FALSE); ?>
-                </a></h1>
-                <dl class="meta">
-                    <dt class="author"><?php echo __('Author'); ?></dt>
-                    <dd class="author" typeof="foaf:Person schema:Person" property="dc:creator schema:author" resource="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
-                    <?php
-                        $avatar_url = get_avatar_url(get_the_author_meta('ID'), ['size' => 25]);
-                        $author_url = get_author_posts_url(get_the_author_meta('ID'));
-                    ?>
-                        <img property="foaf:img schema:image" src="<?php echo $avatar_url; ?>" resource="<?php echo $avatar_url; ?>" />
-                        <a property="foaf:page schema:url" href="<?php echo $author_url; ?>" resource="<?php echo $author_url; ?>">
-                            <?php echo get_the_author(); ?>
-                        </a>
-                    </dd>
-                    <dt class="category"><?php echo __('Category'); ?></dt>
-                    <dd class="category"><?php the_category('&bull;'); ?></dd>
-                    <?php if(has_tag()) : ?>
-                    <dt class="tags"><?php echo __('tag list'); ?></dt>
-                    <dd class="tags"><?php echo get_the_tag_list(NULL, ' &bull; ', NULL); ?></dd>
-                    <?php endif; ?>
-                    <dt class="date"><?php echo __('Date'); ?></dt>
-                    <dd class="date" property="dc:created schema:datePublished" content="<?php echo the_date('c'); ?>">
-                        <a href="<?php echo get_year_link(get_the_time('Y')); ?>"><?php the_time('Y'); ?></a>-<a href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m')); ?>"><?php the_time('m'); ?></a>-<a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('j')); ?>"><?php the_time('j'); ?></a>
-                    </dd>
-                    <dt class="time"><?php echo __('Time'); ?></dt>
-                    <dd class="time"><?php the_time('H:i'); ?></dd>
-                </dl>
-                <?php // TODO include description only when we r in single post ?>
-                <div class="content" property="dc:description schema:articleBody">
+                <header>
+                    <h2 property="dc:title schema:name"><a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                        <?php echo the_title('', '', FALSE); ?>
+                    </a></h2>
+                </header>
+                <?php get_template_part('postmeta'); ?>
+                <div class="content">
                 <?php
                     /* translators: %s: Name of current post */
                     the_content(sprintf(
@@ -41,6 +18,6 @@
                 ?>
                 </div>
             </article>
-            <?php endwhile; endif; ?>
+        <?php endwhile; endif; ?>
         </div>
 <?php get_footer(); ?>
