@@ -26,7 +26,9 @@ function is_big_screen() {
 
 function sidebar_resize() {
     if(is_big_screen()) {
-        $(this).css('display', 'block')
+        $(this)
+            .css('display', 'block')
+            .show()
     } else {
         $(this).css('display', 'none')
     }
