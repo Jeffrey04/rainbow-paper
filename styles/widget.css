@@ -83,7 +83,7 @@ body {
     }
 
 
-    #content h1 {
+    #content header {
         margin: 0 0 1.5rem;
         padding: 2rem 2rem calc(50px + 1rem);
         background-position: bottom;
@@ -109,7 +109,7 @@ body {
     }
 
 
-    #content div * {
+    #content div p {
         margin: 1rem 0;
     }
 
@@ -150,6 +150,7 @@ body {
 
     #content .meta dd {
         display: inline;
+        margin: 0;
     }
 
 
@@ -160,7 +161,90 @@ body {
 
     #content .meta dd.author img {
         float: left;
-        margin-right: 1rem;
+        margin: 0 1rem 0 0;
+    }
+
+
+    #content .comment {
+        border-top: 1px transparent solid;
+    }
+
+
+    #content .comment .meta a {
+        margin: 0;
+    }
+
+
+#comment-form {}
+    #comment-form dl {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    #comment-form dt {
+        margin: 1rem 2rem 0;
+    }
+
+
+    #comment-form dd {
+        margin: 0 2rem 1rem;
+    }
+
+
+    #comment-form dd textarea,
+    #comment-form dd input {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-width: 0 0 1px 0;
+        margin: 0;
+    }
+
+
+    #comment-form dd textarea {
+        height: 5rem;
+    }
+
+
+    #comment-form dd p {
+        margin: 0;
+    }
+
+
+    #comment-form #submit {
+        margin: 1rem 2rem;
+    }
+
+
+#navigation {
+    padding: 0;
+    margin: 0;
+}
+    #navigation::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+
+    #navigation li {
+        list-style-type: none;
+        margin: 1rem 2rem;
+    }
+
+
+    #navigation li a::after {
+        display: none;
+    }
+
+
+    #navigation .previous {
+        float: left;
+    }
+
+
+    #navigation .next {
+        float: right;
     }
 
 

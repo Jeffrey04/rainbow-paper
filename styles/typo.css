@@ -24,8 +24,24 @@ a:link {
     }
 
 
-    #content h1 {
+    #content h1,
+    #content header h2 {
         font-size: 1.5rem;
+    }
+
+
+    #content h2 {
+        font-size: 1.4rem;
+    }
+
+
+    #content h3 {
+        font-size: 1.3rem;
+    }
+
+
+    #content h4 {
+        font-size: 1.4rem;
     }
 
 
@@ -59,6 +75,55 @@ a:link {
     #content .meta dd.category::before {
         content: '\E2C7';
     }
+
+
+#comment-form {}
+    #comment-form header h2 {
+        font-size: 1.4rem;
+    }
+
+
+    #comment-form dd p {
+        font-size: 0.9rem;
+    }
+
+
+    #comment-form label::before {
+        font-family: 'Material Icons';
+        display: inline-block;
+        margin-right: 0.5rem;
+        vertical-align: bottom;
+    }
+
+
+    #comment-form label[for=author]::before {
+        content: '\E7FD';
+    }
+
+
+    #comment-form label[for=email]::before {
+        content: '\E0BE';
+    }
+
+
+    #comment-form label[for=url]::before {
+        content: '\E88A';
+    }
+
+
+    #comment-form label[for=comment]::before {
+        content: '\E0B9';
+    }
+
+
+    #comment-form .disclaimer {
+        font-size: 0.8rem;
+    }
+
+
+#navigation {
+    font-size: 0.9rem;
+}
 
 
 @media only screen and (min-width: 768px) {

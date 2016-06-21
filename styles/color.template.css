@@ -43,26 +43,37 @@ a:hover {
     }
 
 
-    #content h1,
-    #content h1 a:link,
-    #content h1 a:visited, 
-    #content h1 a:active {
+    #content header {
         color: #EEE;
-        background-color: #666;
-    }
-
-
-    #content h1 {
         background-image: <?php echo sprintf('url(%s/bg.php?%s)',
                                              get_template_directory_uri(),
                                              http_build_query(['b' => substr($colors[3], 1),
                                                                'f' => 'FFF',
                                                                'h' => 50])); ?>;
+        background-color: #666;
     }
 
 
     #content h1 a:hover {
         color: #EFEFEF;
+    }
+
+
+#comment-form {}
+    #comment-form dd p {
+        color: #999;
+    }
+
+
+    #comment-form dd input,
+    #comment-form dd textarea {
+        border-color: #CCC;
+        color: #999;
+    }
+
+
+    #comment-form .disclaimer p {
+        color: #999;
     }
 
 
