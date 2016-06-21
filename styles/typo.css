@@ -34,6 +34,11 @@ a:link {
     }
 
 
+    #content .meta dd {
+        font-size: 0.9rem;
+    }
+
+
     #content .meta dd::before {
         font-family: 'Material Icons';
         line-height: 1;
