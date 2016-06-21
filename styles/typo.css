@@ -17,12 +17,42 @@ a:link {
 
 
 #content {}
+    #content a::after {
+        content: ' \E157';
+        font-family: 'Material Icons';
+        vertical-align: bottom;
+    }
+
+
     #content h1 {
         font-size: 1.5rem;
     }
 
+
     #content p {
         line-height: 1.5;
+    }
+
+
+    #content .meta dd::before {
+        font-family: 'Material Icons';
+        line-height: 1;
+        vertical-align: bottom;
+    }
+
+
+    #content .meta dd.date::before {
+        content: '\E8DF';
+    }
+
+
+    #content .meta dd.time::before {
+        content: '\E192';
+    }
+
+
+    #content .meta dd.category::before {
+        content: '\E2C7';
     }
 
 
@@ -38,8 +68,8 @@ a:link {
     #sidebar {}
         #sidebar a::after {
             content: ' \E157';
-            display: inline-block;
             font-family: 'Material Icons';
+            vertical-align: bottom;
         }
 
 
