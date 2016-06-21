@@ -1,4 +1,4 @@
-*, div {
+* {
     box-sizing: border-box;
 }
 
@@ -17,13 +17,16 @@ body {
 
 
 #meta {
-    padding: 0.5rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-#header {}
+#header {
+    position: relative;
+    padding: 0.5rem;
+    z-index: 100;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
     #header .toggle {
         float: left;
     }
@@ -35,14 +38,18 @@ body {
 
 
 #sidebar {
-    clear: both;
-    display: none;
     position: absolute;
     width: 100%;
-    left: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+    #sidebar a::after {
+        display: inline-block;
+    }
+
+    #sidebar .widget {
+        margin: 1rem 1rem 1.5rem;
+    }
 
 
 #content {
@@ -58,15 +65,43 @@ body {
         margin: 1.5rem 0 1rem;
     }
 
+
     #content h1 {
         margin: 0 0 1.5rem;
-        padding: 2rem 1rem 50px;
+        padding: 2rem 1rem calc(50px + 1rem);
         background-position: bottom;
         background-repeat: no-repeat;
     }
 
+
     #content p {
         margin: 1rem;
+    }
+
+
+    #content h1 a::after,
+    #content .meta a::after {
+        display: none;
+    }
+
+
+    #content .meta {
+        margin: 1rem;
+    }
+
+
+    #content .meta dt {
+        display: none;
+    }
+
+
+    #content .meta dd::before {
+        display: inline;
+    }
+
+
+    #content .meta dd {
+        display: inline;
     }
 
 
@@ -79,15 +114,18 @@ body {
 
 
     #meta {
+        padding: 0.5rem;
         width: 33.3%;
         float: right;
-        box-shadow: none;
         margin-top: 1rem;
     }
 
 
     #header {
+        padding: 0;
         margin-top: 2rem;
+        position: static;
+        box-shadow: none;
     }
         #header p {
             display: block;
@@ -99,9 +137,10 @@ body {
         position: static;
         box-shadow: none;
         margin-top: 2rem;
+        position: static;
     }
         #sidebar .widget {
-            margin-top: 1.5rem;
+            margin: 1.5rem 0;
         }
 
 
