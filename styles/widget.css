@@ -48,14 +48,30 @@ body {
         display: inline-block;
     }
 
+
     #sidebar .widget {
         margin: 1rem 1rem 1.5rem;
     }
 
 
+    #sidebar .widget ul {
+        margin: 0.5rem 0;
+    }
+
+
+    #sidebar .widget li {
+        margin: 0.5rem 0;
+    }
+
+
+    #sidebar .widget ul ul {
+        margin: 0.5rem 0 0.5rem 1em;
+    }
+
+
 #content {
     width: calc(100% - 35px);
-    padding: 0.5rem;
+    padding: 1rem;
     clear: both;
     float: left;
 }
@@ -69,14 +85,45 @@ body {
 
     #content h1 {
         margin: 0 0 1.5rem;
-        padding: 2rem 1rem calc(50px + 1rem);
+        padding: 2rem 1.5rem calc(50px + 1rem);
         background-position: bottom;
         background-repeat: no-repeat;
     }
 
 
+    #content ol,
+    #content ul,
+    #content div,
     #content p {
-        margin: 1rem;
+        margin: 1rem 1.5rem;
+    }
+
+
+    #content ol, #content ul {
+        list-style-position: outside;
+    }
+
+
+    #content ul {
+        list-style-type: circle;
+    }
+
+
+    #content div * {
+        margin: 1rem 0;
+    }
+
+
+    #content ul ul,
+    #content ul ol,
+    #content ol ul,
+    #content ol ol {
+        margin: 1rem 0 1rem 1rem;
+    }
+
+
+    #content li {
+        margin: 0 0 0.5rem;
     }
 
 
@@ -87,7 +134,7 @@ body {
 
 
     #content .meta {
-        margin: 1rem;
+        margin: 1rem 1.5rem;
     }
 
 
@@ -106,6 +153,17 @@ body {
     }
 
 
+    #content .meta dd.author {
+        display: block;
+    }
+
+
+    #content .meta dd.author img {
+        float: left;
+        margin-right: 1rem;
+    }
+
+
 /* desktop overwrites here */
 @media only screen and (min-width: 768px) {
     #container {
@@ -115,7 +173,7 @@ body {
 
 
     #meta {
-        padding: 0.5rem;
+        padding: 1rem;
         width: 33.3%;
         float: right;
         margin-top: 1rem;
