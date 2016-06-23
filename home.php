@@ -15,7 +15,7 @@
                     <div class="content">
                     <?php
                         /* translators: %s: Name of current post */
-                        global $more; $more = TRUE; 
+                        global $more; $more = TRUE;
                         the_content(sprintf(
                             __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'rainbow-paper'),
                             get_the_title()
@@ -26,7 +26,7 @@
             </main>
         <?php endif; ?>
 
-        <?php $more = FALSE; while(have_posts()) : the_post(); ?>
+        <?php $more = FALSE; rainbow_paper\sharedaddy_remove(); while(have_posts()) : the_post(); ?>
             <article typeof="schema:BlogPosting" resource="<?php echo esc_url(get_permalink()); ?>" class="card" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
                 <header>
                     <h1 class="title" id="post-<?php the_ID(); ?>">
