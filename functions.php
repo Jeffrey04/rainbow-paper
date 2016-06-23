@@ -26,6 +26,13 @@ function comment($comment, $args, $depth) {
 }
 
 
+function sharedaddy_remove() {
+    if(function_exists('sharing_display')) {
+        remove_filter( 'the_content', 'sharing_display', 19 );
+    }
+}
+
+
 add_action('wp_enqueue_scripts',
            function() {
                // Theme stylesheet
