@@ -16,10 +16,6 @@ body {
 }
 
 
-#meta {
-}
-
-
 #header {
     position: relative;
     padding: 0.5rem;
@@ -72,8 +68,7 @@ body {
 #content {
     width: calc(100% - 35px);
     padding: 1rem;
-    clear: both;
-    float: left;
+    clear: none;
 }
     #content .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -251,6 +246,12 @@ body {
     }
 
 
+#footer {
+    width: calc(100% - 35px);
+    padding: 0 1rem 1rem;
+}
+
+
 /* desktop overwrites here */
 @media only screen and (min-width: 768px) {
     #container {
@@ -294,5 +295,10 @@ body {
         width: 66.7%;
         float: left;
         clear: none;
+    }
+
+    #footer {
+        clear: both;
+        width: 100%;
     }
 }

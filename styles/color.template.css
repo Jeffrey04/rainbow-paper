@@ -54,7 +54,17 @@ a:hover {
     }
 
 
-    #content h1 a:hover {
+    #content header h1 a:link,
+    #content header h1 a:visited,
+    #content header h1 a:active,
+    #content header h2 a:link,
+    #content header h2 a:visited,
+    #content header h2 a:active {
+        color: #AAA;
+    }
+
+
+    #content header h1 a:hover {
         color: #EFEFEF;
     }
 
@@ -74,6 +84,21 @@ a:hover {
 
     #comment-form .disclaimer p {
         color: #999;
+    }
+
+
+#footer {
+    color: #AAA;
+}
+    #footer a:link,
+    #footer a:visited,
+    #footer a:active {
+        color: #AAA;
+    }
+
+
+    #footer a:hover {
+        color: #EFEFEF;
     }
 
 
@@ -111,6 +136,6 @@ a:hover {
 
 
         #sidebar a:hover {
-            color: #AAA;
+            color: #EFEFEF;
         }
 }

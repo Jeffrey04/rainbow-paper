@@ -126,6 +126,12 @@ a:link {
 }
 
 
+#footer {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
 @media only screen and (min-width: 768px) {
     #header {}
         #header h2 {
