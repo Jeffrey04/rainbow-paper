@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php rainbow_paper\sharedaddy_remove(); get_header(); ?>
         <div id="content">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article typeof="schema:BlogPosting" resource="<?php echo esc_url(get_permalink()); ?>" class="card" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
@@ -19,5 +19,10 @@
                 </div>
             </article>
         <?php endwhile; endif; ?>
+
+            <ul class="card" id="navigation">
+                <li class="previous"><?php echo next_posts_link(__('&laquo; Previous Posts')); ?></li>
+                <li class="next"><?php echo previous_posts_link(__('Newer Posts &raquo;')); ?></li>
+            </ul>
         </div>
 <?php get_footer(); ?>
